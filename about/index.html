@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Tentang Saya — Khaerul Oktafiansyah</title>
+    <meta name="title" content="Tentang Saya — Khaerul Oktafiansyah">
+    <meta name="description" content="Portofolio resmi Khaerul Oktafiansyah. Lulusan S1 Teknik Informatika Universitas Pamulang, BNSP Junior Data Analyst, dan spesialis Machine Learning serta Mobile Development.">
+    <meta name="author" content="Khaerul Oktafiansyah">
+    <meta name="keywords" content="Khaerul Oktafiansyah, Data Analyst, Machine Learning, Prediksi Saham BBCA, Teknik Informatika, Universitas Pamulang, Android Developer, Portofolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tentang Saya — Khaerul Oktafiansyah">
+    <meta property="og:description" content="Portofolio resmi Khaerul Oktafiansyah — Junior Data Analyst & Machine Learning Enthusiast.">
+    
+    <!-- Color Scheme & Anti-FOUC Theme Script -->
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Chart.js for Data Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <!-- Logo / Brand -->
+        <a href="../" class="nav-brand" aria-label="Beranda Khaerul Oktafiansyah">
+            <div class="nav-brand-logo">KO</div>
+            <div class="nav-brand-text">
+                <span>Khaerul O.</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" id="nav-menu">
+            <li>
+                <a href="../" class="nav-link ">
+                    Beranda
+                </a>
+            </li>
+            <li>
+                <a href="../about/" class="nav-link active">
+                    Tentang
+                </a>
+            </li>
+            <li>
+                <a href="../projects/" class="nav-link ">
+                    Proyek
+                </a>
+            </li>
+            <li>
+                <a href="../thesis/" class="nav-link ">
+                    <span class="badge badge-emerald" style="padding: 0.15rem 0.4rem; font-size: 0.7rem; margin-right: 0.2rem;">TA</span>
+                    Tugas Akhir
+                </a>
+            </li>
+            <li>
+                <a href="../experience/" class="nav-link ">
+                    Pengalaman
+                </a>
+            </li>
+            <li>
+                <a href="../cv/" class="nav-link ">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a href="../contact/" class="nav-link ">
+                    Kontak
+                </a>
+            </li>
+        </ul>
+
+        <!-- Action Items (Theme Toggle & Mobile Menu) -->
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Mode Gelap dan Terang" title="Ubah Tema Tampilan">
+                <!-- Moon Icon (for Light Mode) -->
+                <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Sun Icon (for Dark Mode) -->
+                <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <!-- Quick CV Action -->
+            <a href="../cv/" class="btn btn-sm btn-outline-emerald d-none-sm">
+                Lihat CV
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-toggle-btn" id="mobile-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Header Banner -->
+<section class="section" style="padding-bottom: 2rem;">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-tag">Profil Profesional</span>
+            <h1 class="section-title">Tentang Saya</h1>
+            <p class="section-desc">
+                Mengenal lebih dekat latar belakang akademis, keahlian data, minat riset komputasi, dan sertifikasi resmi.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Bio & Education Section -->
+<section class="section" style="padding-top: 1rem;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start; margin-bottom: 4rem;">
+            <!-- Left: Bio & Vision -->
+            <div>
+                <h2 style="font-size: 1.85rem; margin-bottom: 1.25rem;">
+                    Menghubungkan <span class="gradient-text">Data Mentah</span> Menjadi <span class="gradient-indigo">Keputusan Strategis</span>
+                </h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 1.05rem; line-height: 1.75;">
+                    Saya adalah mahasiswa tingkat akhir program studi <strong>Teknik Informatika di Universitas Pamulang</strong> dengan IPK <strong>3.77 / 4.00</strong> dan telah memegang sertifikasi kompetensi nasional <strong>BNSP Junior Data Analyst</strong>.
+                </p>
+                <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.75;">
+                    Perjalanan saya di dunia teknologi berfokus pada dua pilar utama: <strong>Data Analytics & Machine Learning</strong> serta <strong>Software & Mobile Development</strong>. Pada proyek Tugas Akhir, saya merancang dan melatih model prediktif time-series menggunakan Python dan Google Colab untuk memprediksi harga saham PT Bank Central Asia Tbk (BBCA), dengan tingkat presisi tinggi (MAPE &lt; 2%).
+                </p>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1rem; line-height: 1.75;">
+                    Selain kompetensi komputasi, saya memiliki pengalaman kerja praktek nyata dalam mengembangkan sistem digital <em>stock opname</em> inventaris gudang berbasis Android & Firebase di PT. Petra Sejahtera Abadi, serta perancangan antarmuka pengguna sistem UMKM di PT. Java Genius All Technology.
+                </p>
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Profil LinkedIn &rarr;
+                    </a>
+                    <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        GitHub Repository &rarr;
+                    </a>
+                    <a href="../cv/" class="btn btn-indigo">
+                        Unduh Resume Lengkap
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Fast Info Card -->
+            <div class="card">
+                <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+                    Data Ringkas
+                </h3>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; font-size: 0.95rem;">
+                    <li>
+                        <span style="color: var(--text-muted); font-size: 0.8rem; display: block; text-transform: uppercase;">Nama Lengkap</span>
+                        <strong style="color: var(--text-primary);">Khaerul Oktafiansyah</strong>
+                    </li>
+                    <li>
+                        <span style="color: var(--text-muted); font-size: 0.8rem; display: block; text-transform: uppercase;">Pendidikan Terakhir</span>
+                        <strong style="color: var(--text-primary);">S1 Teknik Informatika — Universitas Pamulang (IPK 3.77)</strong>
+                    </li>
+                    <li>
+                        <span style="color: var(--text-muted); font-size: 0.8rem; display: block; text-transform: uppercase;">Sertifikasi Utama</span>
+                        <strong style="color: var(--emerald-primary);">BNSP Junior Data Analyst (2025)</strong>
+                    </li>
+                    <li>
+                        <span style="color: var(--text-muted); font-size: 0.8rem; display: block; text-transform: uppercase;">Minat Karir</span>
+                        <span>Junior Data Analyst, Machine Learning Enthusiast, Software/Android Developer</span>
+                    </li>
+                    <li>
+                        <span style="color: var(--text-muted); font-size: 0.8rem; display: block; text-transform: uppercase;">Domisili</span>
+                        <span>Tangerang Selatan, Banten, Indonesia</span>
+                    </li>
+                    <li>
+                        <span style="color: var(--text-muted); font-size: 0.8rem; display: block; text-transform: uppercase;">Status Ketersediaan</span>
+                        <span class="badge badge-emerald">Siap Bekerja Segera (Open to Work)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Riwayat Pendidikan -->
+        <div style="margin-bottom: 4.5rem;">
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                <span class="section-tag">Jejak Akademis</span>
+                <h2 class="section-title">Riwayat Pendidikan</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                                <div class="card" style="border-left: 4px solid var(--emerald-primary);">
+                    <span class="badge badge-emerald" style="margin-bottom: 0.75rem;">September 2022 – Oktober 2026</span>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.35rem;">Universitas Pamulang</h3>
+                    <p style="font-weight: 600; color: var(--indigo-primary); font-size: 1rem; margin-bottom: 0.5rem;">
+                        Sarjana (S1) - Teknik Informatika
+                    </p>
+                    <p style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+                        Prestasi: 3.77 / 4.00 &bull; Status: Semester 8 (Tahap Akhir / Skripsi Selesai)
+                    </p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                                                <li style="position: relative; padding-left: 1.25rem;">
+                            <span style="position: absolute; left: 0; color: var(--emerald-primary);">&bull;</span>
+                            Fokus studi pada Rekayasa Perangkat Lunak, Data Science, dan Machine Learning.
+                        </li>
+                                                <li style="position: relative; padding-left: 1.25rem;">
+                            <span style="position: absolute; left: 0; color: var(--emerald-primary);">&bull;</span>
+                            Menyelesaikan Skripsi pemodelan prediktif time-series saham BBCA dengan evaluasi akurasi tinggi.
+                        </li>
+                                                <li style="position: relative; padding-left: 1.25rem;">
+                            <span style="position: absolute; left: 0; color: var(--emerald-primary);">&bull;</span>
+                            Aktif mengikuti seminar teknologi dan pelatihan pengembangan karir di lingkungan kampus.
+                        </li>
+                                            </ul>
+                </div>
+                                <div class="card" style="border-left: 4px solid var(--emerald-primary);">
+                    <span class="badge badge-emerald" style="margin-bottom: 0.75rem;">2019 – 2022</span>
+                    <h3 style="font-size: 1.35rem; margin-bottom: 0.35rem;">SMK Negeri 1 Kedawung</h3>
+                    <p style="font-weight: 600; color: var(--indigo-primary); font-size: 1rem; margin-bottom: 0.5rem;">
+                        Sekolah Menengah Kejuruan - Jurusan Multimedia
+                    </p>
+                    <p style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">
+                        Prestasi: Rata-rata Nilai 83.73 / 100 &bull; Status: Lulus
+                    </p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                                                <li style="position: relative; padding-left: 1.25rem;">
+                            <span style="position: absolute; left: 0; color: var(--emerald-primary);">&bull;</span>
+                            Fondasi kuat dalam desain grafis, visualisasi UI/UX, dan multimedia interaktif.
+                        </li>
+                                                <li style="position: relative; padding-left: 1.25rem;">
+                            <span style="position: absolute; left: 0; color: var(--emerald-primary);">&bull;</span>
+                            Pengalaman praktik kerja lapangan dalam perancangan antarmuka pengguna.
+                        </li>
+                                            </ul>
+                </div>
+                            </div>
+        </div>
+
+        <!-- Skills Matrix -->
+        <div style="margin-bottom: 4.5rem;">
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                <span class="section-tag">Keahlian & Kompetensi</span>
+                <h2 class="section-title">Skill Matrix</h2>
+                <p class="section-desc">Instrumen dan bahasa pemrograman yang saya gunakan dalam analisis data dan rekayasa perangkat lunak.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <!-- Programming & Query -->
+                <div class="card">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>💻</span> Bahasa Pemrograman & Query
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>Python</span>
+                                <span style="color: var(--emerald-primary);">90%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 90%; height: 100%; background: linear-gradient(90deg, var(--emerald-primary), var(--indigo-primary)); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>SQL (MySQL, PostgreSQL)</span>
+                                <span style="color: var(--emerald-primary);">85%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 85%; height: 100%; background: linear-gradient(90deg, var(--emerald-primary), var(--indigo-primary)); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>Java</span>
+                                <span style="color: var(--emerald-primary);">80%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 80%; height: 100%; background: linear-gradient(90deg, var(--emerald-primary), var(--indigo-primary)); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>PHP (Laravel)</span>
+                                <span style="color: var(--emerald-primary);">78%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 78%; height: 100%; background: linear-gradient(90deg, var(--emerald-primary), var(--indigo-primary)); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+
+                <!-- Tools & Platform Data -->
+                <div class="card">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>📊</span> Tools & Platform Analisis Data
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>Google Colab &amp; Jupyter</span>
+                                <span style="color: var(--indigo-primary);">92%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 92%; height: 100%; background: linear-gradient(90deg, var(--indigo-primary), #38bdf8); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>Tableau &amp; Power BI</span>
+                                <span style="color: var(--indigo-primary);">82%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 82%; height: 100%; background: linear-gradient(90deg, var(--indigo-primary), #38bdf8); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>Spreadsheet &amp; MS Excel</span>
+                                <span style="color: var(--indigo-primary);">90%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 90%; height: 100%; background: linear-gradient(90deg, var(--indigo-primary), #38bdf8); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                                <div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.35rem;">
+                                <span>Firebase Realtime DB</span>
+                                <span style="color: var(--indigo-primary);">80%</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-surface-elevated); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 80%; height: 100%; background: linear-gradient(90deg, var(--indigo-primary), #38bdf8); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+
+                <!-- Keahlian Data & Soft Skills -->
+                <div class="card">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🧠</span> Keahlian Data & Soft Skills
+                    </h3>
+                    <div style="margin-bottom: 1.25rem;">
+                        <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.65rem;">Data Expertise</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                                                        <span class="badge badge-emerald">Data Cleaning &amp; Wrangling</span>
+                                                        <span class="badge badge-emerald">Exploratory Data Analysis (EDA)</span>
+                                                        <span class="badge badge-emerald">Predictive Modeling &amp; ML</span>
+                                                        <span class="badge badge-emerald">Time Series Forecasting</span>
+                                                        <span class="badge badge-emerald">Data Quality &amp; Validation</span>
+                                                    </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.65rem;">Interpersonal & Soft Skills</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                                                        <span class="badge badge-indigo">Problem Solving</span>
+                                                        <span class="badge badge-indigo">Berpikir Analitis &amp; Kritis</span>
+                                                        <span class="badge badge-indigo">Ketelitian &amp; Validasi Detail</span>
+                                                        <span class="badge badge-indigo">Komunikasi Data &amp; Presentasi</span>
+                                                        <span class="badge badge-indigo">Kerjasama Tim Lintas Fungsi</span>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sertifikat Pelatihan Resmi -->
+        <div>
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                <span class="section-tag">Pengakuan Kompetensi</span>
+                <h2 class="section-title">Sertifikat Pelatihan & Profesi</h2>
+                <p class="section-desc">Sertifikasi kompetensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP), Kominfo, dan Dicoding Indonesia.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+                                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                        <span class="badge badge-emerald">BNSP Certified</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Oktober 2025</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.35rem;">BNSP Junior Data Analyst</h3>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: var(--indigo-primary); margin-bottom: 0.75rem;">
+                        Badan Nasional Sertifikasi Profesi (BNSP)
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                        Lulus uji kompetensi profesi nasional mencakup pengumpulan data, penelaahan integritas data, validasi, dan ekstraksi wawasan strategis dari dataset real-case.
+                    </p>
+                </div>
+                                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                        <span class="badge badge-emerald">Kominfo VSGA</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Juni 2023 – Juli 2023</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.35rem;">BNSP Junior Mobile Programmer</h3>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: var(--indigo-primary); margin-bottom: 0.75rem;">
+                        Kementerian Kominfo - Digital Talent Scholarship (VSGA)
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                        Menyelesaikan pelatihan intensif 90 Jam Pelatihan (JP) mencakup arsitektur mobile, mobile security, persistensi data SQLite/Firebase, dan implementasi CRUD.
+                    </p>
+                </div>
+                                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                        <span class="badge badge-emerald">Dicoding</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Desember 2022</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.35rem;">Memulai Pemrograman dengan Java</h3>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: var(--indigo-primary); margin-bottom: 0.75rem;">
+                        Dicoding Indonesia
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                        Mendalami dasar pemrograman Java, tipe data, struktur kontrol alur, fungsi I/O, serta konsep Object-Oriented Programming (OOP).
+                    </p>
+                </div>
+                                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                        <span class="badge badge-emerald">Dicoding</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">September 2022</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.35rem;">Meniti Karir Sebagai Software Developer</h3>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: var(--indigo-primary); margin-bottom: 0.75rem;">
+                        Dicoding Indonesia
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                        Pemahaman komprehensif alur karir developer, metodologi kerja Agile/Scrum, dan kolaborasi tim software engineering.
+                    </p>
+                </div>
+                                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                        <span class="badge badge-emerald">Dicoding</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">September 2022</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.35rem;">Pengenalan Data pada Pemrograman (Data 101)</h3>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: var(--indigo-primary); margin-bottom: 0.75rem;">
+                        Dicoding Indonesia
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                        Konsep fundamental representasi data, tipe struktur data, basis data relasional, dan etika pengolahan data.
+                    </p>
+                </div>
+                                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                        <span class="badge badge-emerald">Dicoding</span>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Agustus 2022</span>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.35rem;">Pengenalan ke Logika Pemrograman</h3>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: var(--indigo-primary); margin-bottom: 0.75rem;">
+                        Dicoding Indonesia
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                        Studi komputasional mengenai logika proposisi, pemecahan masalah algoritma, dan alur perancangan solusi.
+                    </p>
+                </div>
+                            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-col">
+                <a href="../" class="nav-brand" style="margin-bottom: 1.25rem;">
+                    <div class="nav-brand-logo">KO</div>
+                    <span>Khaerul Oktafiansyah</span>
+                </a>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 360px;">
+                    Lulusan S1 Teknik Informatika Universitas Pamulang dan pemegang sertifikasi BNSP Junior Data Analyst. Berfokus pada transformasi data menjadi keputusan strategis.
+                </p>
+                <div style="display: flex; gap: 0.75rem;">
+                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub">
+                        GitHub
+                    </a>
+                    <a href="https://wa.me/6281573179872" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Navigasi Halaman</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <li><a href="../" style="hover:color: var(--emerald-primary);">Beranda</a></li>
+                    <li><a href="../about/">Tentang Saya</a></li>
+                    <li><a href="../projects/">Katalog Proyek</a></li>
+                    <li><a href="../thesis/">Tugas Akhir (BBCA)</a></li>
+                    <li><a href="../experience/">Riwayat Pengalaman</a></li>
+                    <li><a href="../cv/">Curriculum Vitae</a></li>
+                    <li><a href="../contact/">Hubungi Saya</a></li>
+                </ul>
+            </div>
+
+            <!-- Direct Contact -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Informasi Kontak</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Email:</span>
+                        <a href="mailto:khaeruloktafiansyah04@gmail.com" style="color: var(--emerald-primary);">khaeruloktafiansyah04@gmail.com</a>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Telepon / WA:</span>
+                        <span>+62 815-7317-9872</span>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Lokasi Domisili:</span>
+                        <span>Tangerang Selatan, Banten, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p>&copy; 2026 Khaerul Oktafiansyah. Seluruh hak cipta dilindungi.</p>
+                <p style="font-size: 0.85rem;">
+                    Dibuat dengan <strong style="color: var(--indigo-primary);">Laravel PHP</strong> &bull; Siap Hosting di <strong style="color: var(--emerald-primary);">GitHub Pages</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    </body>
+</html>

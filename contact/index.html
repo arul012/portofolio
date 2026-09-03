@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Hubungi Saya — Khaerul Oktafiansyah</title>
+    <meta name="title" content="Hubungi Saya — Khaerul Oktafiansyah">
+    <meta name="description" content="Portofolio resmi Khaerul Oktafiansyah. Lulusan S1 Teknik Informatika Universitas Pamulang, BNSP Junior Data Analyst, dan spesialis Machine Learning serta Mobile Development.">
+    <meta name="author" content="Khaerul Oktafiansyah">
+    <meta name="keywords" content="Khaerul Oktafiansyah, Data Analyst, Machine Learning, Prediksi Saham BBCA, Teknik Informatika, Universitas Pamulang, Android Developer, Portofolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hubungi Saya — Khaerul Oktafiansyah">
+    <meta property="og:description" content="Portofolio resmi Khaerul Oktafiansyah — Junior Data Analyst & Machine Learning Enthusiast.">
+    
+    <!-- Color Scheme & Anti-FOUC Theme Script -->
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Chart.js for Data Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <!-- Logo / Brand -->
+        <a href="../" class="nav-brand" aria-label="Beranda Khaerul Oktafiansyah">
+            <div class="nav-brand-logo">KO</div>
+            <div class="nav-brand-text">
+                <span>Khaerul O.</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" id="nav-menu">
+            <li>
+                <a href="../" class="nav-link ">
+                    Beranda
+                </a>
+            </li>
+            <li>
+                <a href="../about/" class="nav-link ">
+                    Tentang
+                </a>
+            </li>
+            <li>
+                <a href="../projects/" class="nav-link ">
+                    Proyek
+                </a>
+            </li>
+            <li>
+                <a href="../thesis/" class="nav-link ">
+                    <span class="badge badge-emerald" style="padding: 0.15rem 0.4rem; font-size: 0.7rem; margin-right: 0.2rem;">TA</span>
+                    Tugas Akhir
+                </a>
+            </li>
+            <li>
+                <a href="../experience/" class="nav-link ">
+                    Pengalaman
+                </a>
+            </li>
+            <li>
+                <a href="../cv/" class="nav-link ">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a href="../contact/" class="nav-link active">
+                    Kontak
+                </a>
+            </li>
+        </ul>
+
+        <!-- Action Items (Theme Toggle & Mobile Menu) -->
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Mode Gelap dan Terang" title="Ubah Tema Tampilan">
+                <!-- Moon Icon (for Light Mode) -->
+                <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Sun Icon (for Dark Mode) -->
+                <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <!-- Quick CV Action -->
+            <a href="../cv/" class="btn btn-sm btn-outline-emerald d-none-sm">
+                Lihat CV
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-toggle-btn" id="mobile-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Komunikasi & Kolaborasi</span>
+            <h1 class="section-title">Hubungi Saya</h1>
+            <p class="section-desc">
+                Apakah Anda memiliki lowongan posisi, proyek data analytics, atau ingin berdiskusi mengenai riset machine learning? Jangan ragu untuk mengirim pesan.
+            </p>
+        </div>
+
+        <!-- Notification Alerts -->
+        
+        
+        <div class="contact-grid">
+            <!-- Left: Direct Contact Information -->
+            <div>
+                <h2 style="font-size: 1.65rem; margin-bottom: 1.25rem;">Saluran Komunikasi Langsung</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
+                    Anda dapat menghubungi saya secara instan melalui kontak di bawah ini. Saya biasanya merespons dalam waktu kurang dari 24 jam.
+                </p>
+
+                <!-- Contact Item 1: Email -->
+                <a href="mailto:khaeruloktafiansyah04@gmail.com" class="contact-card-item">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.8rem; color: var(--text-muted); display: block; text-transform: uppercase;">Email Utama</span>
+                        <strong style="color: var(--text-primary); font-size: 0.95rem;">khaeruloktafiansyah04@gmail.com</strong>
+                    </div>
+                </a>
+
+                <!-- Contact Item 2: WhatsApp -->
+                <a href="https://wa.me/6281573179872" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.8rem; color: var(--text-muted); display: block; text-transform: uppercase;">WhatsApp / Telepon</span>
+                        <strong style="color: var(--text-primary); font-size: 0.95rem;">+62 815-7317-9872</strong>
+                    </div>
+                </a>
+
+                <!-- Contact Item 3: LinkedIn -->
+                <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.8rem; color: var(--text-muted); display: block; text-transform: uppercase;">Jejaring Profesional</span>
+                        <strong style="color: var(--text-primary); font-size: 0.95rem;">linkedin.com/in/khaerul-oktafiansyah</strong>
+                    </div>
+                </a>
+
+                <!-- Contact Item 4: GitHub -->
+                <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.8rem; color: var(--text-muted); display: block; text-transform: uppercase;">Source Code Repository</span>
+                        <strong style="color: var(--text-primary); font-size: 0.95rem;">github.com/arul012</strong>
+                    </div>
+                </a>
+
+                <!-- Contact Item 5: Location -->
+                <div class="contact-card-item">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.8rem; color: var(--text-muted); display: block; text-transform: uppercase;">Lokasi Tinggal</span>
+                        <strong style="color: var(--text-primary); font-size: 0.95rem;">Tangerang Selatan, Banten, Indonesia</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Interactive Contact Form with Anti-Spam Protection -->
+            <div class="card">
+                <h3 style="font-size: 1.45rem; margin-bottom: 0.5rem;">Kirim Pesan Langsung</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.75rem;">
+                    Formulir ini dilengkapi proteksi anti-spam honeypot dan validasi data.
+                </p>
+
+                <form action="https://formspree.io/f/xbjnbqee" method="POST" method="POST" id="contact-form">
+                    <input type="hidden" name="_token" value="ezD9kTgMJ1Q2juCit30VqaYrRuHPPJD0YrSlnSyl" autocomplete="off">
+                    <!-- Honeypot Anti-Spam Field (Hidden from real users, bots will fill it) -->
+                    <div style="display: none !important;" aria-hidden="true">
+                        <label for="_gotcha">Jangan isi field ini:</label>
+                        <input type="text" name="_gotcha" id="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- Input: Name -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nama Lengkap *</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Masukkan nama lengkap Anda" required>
+                    </div>
+
+                    <!-- Input: Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Alamat Email *</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="nama@email.com" required>
+                    </div>
+
+                    <!-- Input: Subject -->
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subjek Pesan *</label>
+                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Contoh: Tawaran Pekerjaan Junior Data Analyst" required>
+                    </div>
+
+                    <!-- Input: Message -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">Isi Pesan *</label>
+                        <textarea name="message" id="message" class="form-control" rows="5" placeholder="Tuliskan pesan, rincian tawaran, atau pertanyaan Anda di sini..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                        Kirim Pesan Sekarang
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-col">
+                <a href="../" class="nav-brand" style="margin-bottom: 1.25rem;">
+                    <div class="nav-brand-logo">KO</div>
+                    <span>Khaerul Oktafiansyah</span>
+                </a>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 360px;">
+                    Lulusan S1 Teknik Informatika Universitas Pamulang dan pemegang sertifikasi BNSP Junior Data Analyst. Berfokus pada transformasi data menjadi keputusan strategis.
+                </p>
+                <div style="display: flex; gap: 0.75rem;">
+                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub">
+                        GitHub
+                    </a>
+                    <a href="https://wa.me/6281573179872" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Navigasi Halaman</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <li><a href="../" style="hover:color: var(--emerald-primary);">Beranda</a></li>
+                    <li><a href="../about/">Tentang Saya</a></li>
+                    <li><a href="../projects/">Katalog Proyek</a></li>
+                    <li><a href="../thesis/">Tugas Akhir (BBCA)</a></li>
+                    <li><a href="../experience/">Riwayat Pengalaman</a></li>
+                    <li><a href="../cv/">Curriculum Vitae</a></li>
+                    <li><a href="../contact/">Hubungi Saya</a></li>
+                </ul>
+            </div>
+
+            <!-- Direct Contact -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Informasi Kontak</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Email:</span>
+                        <a href="mailto:khaeruloktafiansyah04@gmail.com" style="color: var(--emerald-primary);">khaeruloktafiansyah04@gmail.com</a>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Telepon / WA:</span>
+                        <span>+62 815-7317-9872</span>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Lokasi Domisili:</span>
+                        <span>Tangerang Selatan, Banten, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p>&copy; 2026 Khaerul Oktafiansyah. Seluruh hak cipta dilindungi.</p>
+                <p style="font-size: 0.85rem;">
+                    Dibuat dengan <strong style="color: var(--indigo-primary);">Laravel PHP</strong> &bull; Siap Hosting di <strong style="color: var(--emerald-primary);">GitHub Pages</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    </body>
+</html>

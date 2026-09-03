@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Tugas Akhir: Prediksi Harga Saham BBCA — Khaerul Oktafiansyah</title>
+    <meta name="title" content="Tugas Akhir: Prediksi Harga Saham BBCA — Khaerul Oktafiansyah">
+    <meta name="description" content="Portofolio resmi Khaerul Oktafiansyah. Lulusan S1 Teknik Informatika Universitas Pamulang, BNSP Junior Data Analyst, dan spesialis Machine Learning serta Mobile Development.">
+    <meta name="author" content="Khaerul Oktafiansyah">
+    <meta name="keywords" content="Khaerul Oktafiansyah, Data Analyst, Machine Learning, Prediksi Saham BBCA, Teknik Informatika, Universitas Pamulang, Android Developer, Portofolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tugas Akhir: Prediksi Harga Saham BBCA — Khaerul Oktafiansyah">
+    <meta property="og:description" content="Portofolio resmi Khaerul Oktafiansyah — Junior Data Analyst & Machine Learning Enthusiast.">
+    
+    <!-- Color Scheme & Anti-FOUC Theme Script -->
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Chart.js for Data Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <!-- Logo / Brand -->
+        <a href="../" class="nav-brand" aria-label="Beranda Khaerul Oktafiansyah">
+            <div class="nav-brand-logo">KO</div>
+            <div class="nav-brand-text">
+                <span>Khaerul O.</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" id="nav-menu">
+            <li>
+                <a href="../" class="nav-link ">
+                    Beranda
+                </a>
+            </li>
+            <li>
+                <a href="../about/" class="nav-link ">
+                    Tentang
+                </a>
+            </li>
+            <li>
+                <a href="../projects/" class="nav-link ">
+                    Proyek
+                </a>
+            </li>
+            <li>
+                <a href="../thesis/" class="nav-link active">
+                    <span class="badge badge-emerald" style="padding: 0.15rem 0.4rem; font-size: 0.7rem; margin-right: 0.2rem;">TA</span>
+                    Tugas Akhir
+                </a>
+            </li>
+            <li>
+                <a href="../experience/" class="nav-link ">
+                    Pengalaman
+                </a>
+            </li>
+            <li>
+                <a href="../cv/" class="nav-link ">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a href="../contact/" class="nav-link ">
+                    Kontak
+                </a>
+            </li>
+        </ul>
+
+        <!-- Action Items (Theme Toggle & Mobile Menu) -->
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Mode Gelap dan Terang" title="Ubah Tema Tampilan">
+                <!-- Moon Icon (for Light Mode) -->
+                <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Sun Icon (for Dark Mode) -->
+                <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <!-- Quick CV Action -->
+            <a href="../cv/" class="btn btn-sm btn-outline-emerald d-none-sm">
+                Lihat CV
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-toggle-btn" id="mobile-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hidden element containing JSON data for Chart.js -->
+<script id="thesis-chart-data" type="application/json">
+    {"labels":["Hari 1","Hari 2","Hari 3","Hari 4","Hari 5","Hari 6","Hari 7","Hari 8","Hari 9","Hari 10","Hari 11","Hari 12","Hari 13","Hari 14","Hari 15","Hari 16","Hari 17","Hari 18","Hari 19","Hari 20","Hari 21","Hari 22","Hari 23","Hari 24","Hari 25","Hari 26","Hari 27","Hari 28","Hari 29","Hari 30"],"actual":[9850,9900,9875,9950,10025,10000,9975,10050,10100,10075,10150,10200,10175,10125,10225,10275,10250,10300,10350,10325,10375,10425,10400,10475,10525,10500,10450,10550,10600,10575],"predicted":[9840,9890,9885,9935,10010,10015,9965,10035,10090,10085,10135,10185,10185,10140,10210,10260,10265,10285,10340,10335,10360,10410,10415,10460,10510,10515,10465,10535,10585,10590]}
+</script>
+
+<!-- Header Section -->
+<section class="section" style="padding-bottom: 2rem;">
+    <div class="container">
+        <div class="section-header" style="max-width: 850px;">
+            <span class="section-tag">Skripsi & Riset Akademik</span>
+            <h1 class="section-title" style="font-size: 2.5rem; line-height: 1.25;">
+                Pemodelan Prediksi Harga Saham PT Bank Central Asia Tbk (BBCA) Menggunakan Machine Learning
+            </h1>
+            <p class="section-desc">
+                Program Studi S1 Teknik Informatika, Universitas Pamulang &bull; Periode: Oktober 2025 – September 2026
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Abstract & Executive Overview -->
+<section class="section" style="padding-top: 1rem; padding-bottom: 3rem;">
+    <div class="container">
+        <div class="thesis-hero-card">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--emerald-primary);">
+                Abstrak & Latar Belakang Riset
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+                Pasar modal memiliki tingkat volatilitas tinggi yang dipengaruhi oleh dinamika ekonomi dan sentimen pasar. Penelitian tugas akhir ini bertujuan merancang dan mengevaluasi model prediktif berbasis Machine Learning / Time Series untuk mengestimasi pergerakan harga penutupan (Close Price) saham PT Bank Central Asia Tbk (BBCA). Melalui integrasi tahapan data cleaning, rekayasa fitur indikator teknikal, dan evaluasi menggunakan MAE, RMSE, dan MAPE, model terbukti mampu memetakan pola historis secara presisi dan menghasilkan proyeksi yang akurat untuk mendukung pengambilan keputusan investasi.
+            </p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://colab.research.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Buka Google Colab Notebook
+                </a>
+                <a href="#visualisasi" class="btn btn-indigo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    Lihat Grafik Prediksi
+                </a>
+                <a href="../contact/" class="btn btn-secondary">
+                    Ajukan Diskusi / Paper
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research Objectives -->
+<section class="section" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+        <div class="section-header" style="text-align: left; margin-bottom: 2.5rem;">
+            <span class="section-tag">Tujuan Penelitian</span>
+            <h2 class="section-title">Sasaran Utama Riset</h2>
+            <p class="section-desc">Target komputasional dan pemodelan prediktif yang dicapai dalam penyusunan tugas akhir.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                        <div class="card" style="position: relative; overflow: hidden;">
+                <span style="font-size: 2.5rem; font-weight: 800; color: rgba(16, 185, 129, 0.15); position: absolute; top: 10px; right: 15px;">
+                    01
+                </span>
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); position: relative;">
+                    Fokus 1
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; position: relative;">
+                    Menganalisis tren fluktuasi historis pergerakan harga saham BBCA secara multi-periode.
+                </p>
+            </div>
+                        <div class="card" style="position: relative; overflow: hidden;">
+                <span style="font-size: 2.5rem; font-weight: 800; color: rgba(16, 185, 129, 0.15); position: absolute; top: 10px; right: 15px;">
+                    02
+                </span>
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); position: relative;">
+                    Fokus 2
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; position: relative;">
+                    Menerapkan tahapan data preprocessing komprehensif (penanganan data hilang, normalisasi, penghapusan outlier).
+                </p>
+            </div>
+                        <div class="card" style="position: relative; overflow: hidden;">
+                <span style="font-size: 2.5rem; font-weight: 800; color: rgba(16, 185, 129, 0.15); position: absolute; top: 10px; right: 15px;">
+                    03
+                </span>
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); position: relative;">
+                    Fokus 3
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; position: relative;">
+                    Mengekstrak fitur berbasis lag-price dan technical indicators (Moving Averages 7 &amp; 14 hari, Volatilitas) untuk meningkatkan performa model.
+                </p>
+            </div>
+                        <div class="card" style="position: relative; overflow: hidden;">
+                <span style="font-size: 2.5rem; font-weight: 800; color: rgba(16, 185, 129, 0.15); position: absolute; top: 10px; right: 15px;">
+                    04
+                </span>
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--text-primary); position: relative;">
+                    Fokus 4
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; position: relative;">
+                    Menguji dan membandingkan performa model algoritma prediktif berbasis metrik evaluasi baku (MAE, RMSE, MAPE).
+                </p>
+            </div>
+                    </div>
+    </div>
+</section>
+
+<!-- Methodology Pipeline Stepper -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Alur Komputasi</span>
+            <h2 class="section-title">Metodologi Data Science End-to-End</h2>
+            <p class="section-desc">Tahapan sistematis pemrosesan data historis dari akuisisi hingga evaluasi akurasi model.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.5rem;">
+                        <div class="card" style="border-top: 4px solid var(--emerald-primary);">
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: var(--emerald-primary); font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-family: var(--font-heading);">
+                    01
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Data Acquisition</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                    Pengambilan data historis harga saham BBCA dari Yahoo Finance / Bursa Efek Indonesia mencakup Open, High, Low, Close, Volume.
+                </p>
+            </div>
+                        <div class="card" style="border-top: 4px solid var(--emerald-primary);">
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: var(--emerald-primary); font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-family: var(--font-heading);">
+                    02
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Data Cleaning &amp; Preprocessing</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                    Validasi integritas data, imputasi nilai null pada hari libur bursa, dan transformasi format waktu standar ISO.
+                </p>
+            </div>
+                        <div class="card" style="border-top: 4px solid var(--emerald-primary);">
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: var(--emerald-primary); font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-family: var(--font-heading);">
+                    03
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Feature Engineering</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                    Pembuatan fitur lag $T-1$ hingga $T-7$, Simple Moving Average (SMA), Exponential Moving Average (EMA), serta rasio volatilitas harian.
+                </p>
+            </div>
+                        <div class="card" style="border-top: 4px solid var(--emerald-primary);">
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: var(--emerald-primary); font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-family: var(--font-heading);">
+                    04
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Model Training &amp; Tuning</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                    Pemisahan data Train-Test (80:20), fitting model time series berbasis Python di Google Colab dengan hyperparameter tuning.
+                </p>
+            </div>
+                        <div class="card" style="border-top: 4px solid var(--emerald-primary);">
+                <div style="width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); background: rgba(16, 185, 129, 0.15); color: var(--emerald-primary); font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-family: var(--font-heading);">
+                    05
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Evaluation &amp; Verification</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                    Pengukuran deviasi nilai prediksi terhadap harga aktual menggunakan MAE, RMSE, dan kalkulasi persentase kesalahan MAPE.
+                </p>
+            </div>
+                    </div>
+    </div>
+</section>
+
+<!-- Interactive Visualization Section -->
+<section class="section" id="visualisasi" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Visualisasi Interaktif</span>
+            <h2 class="section-title">Hasil Prediksi Harga Saham BBCA</h2>
+            <p class="section-desc">Perbandingan time series antara harga penutupan aktual (Close Price) vs hasil inferensi model Machine Learning pada 30 sampel pengujian.</p>
+        </div>
+
+        <!-- Chart Container Card -->
+        <div class="chart-container-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-subtle);">
+                <div>
+                    <h3 style="font-size: 1.25rem;">Tren Harga Saham BBCA (Aktual vs Prediksi)</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Satuan: Rupiah (IDR) &bull; Horizon Waktu: Time Series Daily</p>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <span class="badge badge-emerald">Aktual: Hijau</span>
+                    <span class="badge badge-indigo">Prediksi ML: Ungu Putus-putus</span>
+                </div>
+            </div>
+
+            <!-- Canvas for Chart.js -->
+            <div class="chart-wrapper">
+                <canvas id="bbcaChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Quantitative Evaluation Metrics Grid -->
+        <div class="section-header" style="margin-top: 4rem; margin-bottom: 2rem;">
+            <span class="section-tag">Tolok Ukur Evaluasi</span>
+            <h3 class="section-title" style="font-size: 1.85rem;">Hasil Evaluasi Kinerja Model</h3>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                        <div class="card metric-box" style="text-align: left; background: var(--bg-surface);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+                        Metrik Akurasi
+                    </span>
+                    <span class="badge badge-emerald">Terverifikasi</span>
+                </div>
+                <h4 style="font-size: 2.2rem; margin-bottom: 0.25rem; color: var(--emerald-primary);">
+                    Rp 85.40
+                </h4>
+                <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                    Mean Absolute Error (MAE)
+                </p>
+                <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                    Rata-rata selisih absolut antara harga prediksi dan harga aktual pasar saham.
+                </span>
+            </div>
+                        <div class="card metric-box" style="text-align: left; background: var(--bg-surface);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+                        Metrik Akurasi
+                    </span>
+                    <span class="badge badge-emerald">Terverifikasi</span>
+                </div>
+                <h4 style="font-size: 2.2rem; margin-bottom: 0.25rem; color: var(--emerald-primary);">
+                    Rp 112.20
+                </h4>
+                <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                    Root Mean Squared Error (RMSE)
+                </p>
+                <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                    Akar kuadrat rata-rata kesalahan, sensitif terhadap outlier ekstrem, membuktikan stabilitas model.
+                </span>
+            </div>
+                        <div class="card metric-box" style="text-align: left; background: var(--bg-surface);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+                        Metrik Akurasi
+                    </span>
+                    <span class="badge badge-emerald">Terverifikasi</span>
+                </div>
+                <h4 style="font-size: 2.2rem; margin-bottom: 0.25rem; color: var(--emerald-primary);">
+                    1.72%
+                </h4>
+                <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                    Mean Absolute Percentage Error (MAPE)
+                </p>
+                <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                    Tingkat kesalahan di bawah 2%, mengindikasikan kemampuan prediksi berkategori Sangat Akurat (Very High Accuracy).
+                </span>
+            </div>
+                        <div class="card metric-box" style="text-align: left; background: var(--bg-surface);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">
+                        Metrik Akurasi
+                    </span>
+                    <span class="badge badge-emerald">Terverifikasi</span>
+                </div>
+                <h4 style="font-size: 2.2rem; margin-bottom: 0.25rem; color: var(--emerald-primary);">
+                    0.968
+                </h4>
+                <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem;">
+                    R-Squared (R² Score)
+                </p>
+                <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                    Model mampu menerangkan 96.8% variansi fluktuasi pergerakan harga penutupan BBCA.
+                </span>
+            </div>
+                    </div>
+    </div>
+</section>
+
+<!-- Paper & Presentation Links -->
+<section class="section">
+    <div class="container" style="max-width: 800px; text-align: center;">
+        <span class="section-tag">Dokumentasi Ilmiah</span>
+        <h2 class="section-title" style="margin-top: 0.5rem;">Laporan Skripsi & Materi Paparan</h2>
+        <p class="section-desc" style="margin-bottom: 2.5rem;">
+            Dokumen skripsi lengkap, draft naskah publikasi, dan slide presentasi sidang tugas akhir dapat diakses untuk keperluan verifikasi akademik.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+            <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📄</div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Laporan Skripsi</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Format PDF Dokumen Lengkap</p>
+                <a href="../cv/" class="btn btn-sm btn-primary">Unduh Naskah</a>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Slide Presentasi</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Slide Sidang Tugas Akhir</p>
+                <a href="../cv/" class="btn btn-sm btn-secondary">Lihat Paparan</a>
+            </div>
+
+            <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">💻</div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Google Colab</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Jupyter Notebook Code</p>
+                <a href="https://colab.research.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-indigo">Buka Kode</a>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-col">
+                <a href="../" class="nav-brand" style="margin-bottom: 1.25rem;">
+                    <div class="nav-brand-logo">KO</div>
+                    <span>Khaerul Oktafiansyah</span>
+                </a>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 360px;">
+                    Lulusan S1 Teknik Informatika Universitas Pamulang dan pemegang sertifikasi BNSP Junior Data Analyst. Berfokus pada transformasi data menjadi keputusan strategis.
+                </p>
+                <div style="display: flex; gap: 0.75rem;">
+                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub">
+                        GitHub
+                    </a>
+                    <a href="https://wa.me/6281573179872" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Navigasi Halaman</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <li><a href="../" style="hover:color: var(--emerald-primary);">Beranda</a></li>
+                    <li><a href="../about/">Tentang Saya</a></li>
+                    <li><a href="../projects/">Katalog Proyek</a></li>
+                    <li><a href="../thesis/">Tugas Akhir (BBCA)</a></li>
+                    <li><a href="../experience/">Riwayat Pengalaman</a></li>
+                    <li><a href="../cv/">Curriculum Vitae</a></li>
+                    <li><a href="../contact/">Hubungi Saya</a></li>
+                </ul>
+            </div>
+
+            <!-- Direct Contact -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Informasi Kontak</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Email:</span>
+                        <a href="mailto:khaeruloktafiansyah04@gmail.com" style="color: var(--emerald-primary);">khaeruloktafiansyah04@gmail.com</a>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Telepon / WA:</span>
+                        <span>+62 815-7317-9872</span>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Lokasi Domisili:</span>
+                        <span>Tangerang Selatan, Banten, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p>&copy; 2026 Khaerul Oktafiansyah. Seluruh hak cipta dilindungi.</p>
+                <p style="font-size: 0.85rem;">
+                    Dibuat dengan <strong style="color: var(--indigo-primary);">Laravel PHP</strong> &bull; Siap Hosting di <strong style="color: var(--emerald-primary);">GitHub Pages</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    </body>
+</html>

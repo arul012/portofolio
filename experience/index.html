@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Riwayat Pengalaman — Khaerul Oktafiansyah</title>
+    <meta name="title" content="Riwayat Pengalaman — Khaerul Oktafiansyah">
+    <meta name="description" content="Portofolio resmi Khaerul Oktafiansyah. Lulusan S1 Teknik Informatika Universitas Pamulang, BNSP Junior Data Analyst, dan spesialis Machine Learning serta Mobile Development.">
+    <meta name="author" content="Khaerul Oktafiansyah">
+    <meta name="keywords" content="Khaerul Oktafiansyah, Data Analyst, Machine Learning, Prediksi Saham BBCA, Teknik Informatika, Universitas Pamulang, Android Developer, Portofolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Riwayat Pengalaman — Khaerul Oktafiansyah">
+    <meta property="og:description" content="Portofolio resmi Khaerul Oktafiansyah — Junior Data Analyst & Machine Learning Enthusiast.">
+    
+    <!-- Color Scheme & Anti-FOUC Theme Script -->
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Chart.js for Data Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <!-- Logo / Brand -->
+        <a href="../" class="nav-brand" aria-label="Beranda Khaerul Oktafiansyah">
+            <div class="nav-brand-logo">KO</div>
+            <div class="nav-brand-text">
+                <span>Khaerul O.</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" id="nav-menu">
+            <li>
+                <a href="../" class="nav-link ">
+                    Beranda
+                </a>
+            </li>
+            <li>
+                <a href="../about/" class="nav-link ">
+                    Tentang
+                </a>
+            </li>
+            <li>
+                <a href="../projects/" class="nav-link ">
+                    Proyek
+                </a>
+            </li>
+            <li>
+                <a href="../thesis/" class="nav-link ">
+                    <span class="badge badge-emerald" style="padding: 0.15rem 0.4rem; font-size: 0.7rem; margin-right: 0.2rem;">TA</span>
+                    Tugas Akhir
+                </a>
+            </li>
+            <li>
+                <a href="../experience/" class="nav-link active">
+                    Pengalaman
+                </a>
+            </li>
+            <li>
+                <a href="../cv/" class="nav-link ">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a href="../contact/" class="nav-link ">
+                    Kontak
+                </a>
+            </li>
+        </ul>
+
+        <!-- Action Items (Theme Toggle & Mobile Menu) -->
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Mode Gelap dan Terang" title="Ubah Tema Tampilan">
+                <!-- Moon Icon (for Light Mode) -->
+                <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Sun Icon (for Dark Mode) -->
+                <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <!-- Quick CV Action -->
+            <a href="../cv/" class="btn btn-sm btn-outline-emerald d-none-sm">
+                Lihat CV
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-toggle-btn" id="mobile-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Jejak Profesional</span>
+            <h1 class="section-title">Riwayat Pengalaman</h1>
+            <p class="section-desc">
+                Pengalaman kerja praktek, magang industri, rekayasa aplikasi Android, perancangan antarmuka pengguna (UI), dan pengajaran materi teknis.
+            </p>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline">
+                        <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
+                        <span class="timeline-period">Maret 2025 – Juni 2025</span>
+                        <span class="badge badge-emerald">Kerja Praktek / Internship</span>
+                    </div>
+
+                    <h2 class="timeline-title">Software Developer / Anggota Tim Pengembang Aplikasi</h2>
+                    <h3 class="timeline-company">PT. Petra Sejahtera Abadi &bull; <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Tangerang</span></h3>
+
+                    <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.975rem; line-height: 1.65;">
+                        Mengembangkan aplikasi sistem stock opname gudang berbasis Android untuk mendigitalisasi proses pencatatan inventaris barang perusahaan.
+                    </p>
+
+                    <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 0.75rem;">
+                        Tanggung Jawab & Pencapaian Terukur:
+                    </h4>
+
+                    <ul class="timeline-list">
+                                                <li>Mengimplementasikan metode prototype untuk merancang dan mengembangkan sistem stock opname gudang berbasis Android.</li>
+                                                <li>Berhasil mengefisiensikan waktu pencatatan data stok barang yang sebelumnya manual berbasis kartu stok menjadi sistem digital otomatis.</li>
+                                                <li>Mengintegrasikan data stok secara digital dan terpusat menggunakan Firebase Realtime Database untuk meminimalkan risiko kehilangan data inventaris.</li>
+                                                <li>Membangun aplikasi menggunakan Android Studio dan bahasa pemrograman Java.</li>
+                                            </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                                                <span class="badge badge-indigo">Java</span>
+                                                <span class="badge badge-indigo">Android Studio</span>
+                                                <span class="badge badge-indigo">Firebase</span>
+                                                <span class="badge badge-indigo">Mobile Architecture</span>
+                                                <span class="badge badge-indigo">Prototype Method</span>
+                                            </div>
+                </div>
+            </div>
+                        <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
+                        <span class="timeline-period">Agustus 2021 – Oktober 2021</span>
+                        <span class="badge badge-emerald">Praktek Kerja Lapangan</span>
+                    </div>
+
+                    <h2 class="timeline-title">User Interface Designer</h2>
+                    <h3 class="timeline-company">PT. Java Genius All Technology &bull; <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Jakarta / Remote</span></h3>
+
+                    <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.975rem; line-height: 1.65;">
+                        Merancang antarmuka pengguna komprehensif untuk produk digital website UMKM dan berkolaborasi dalam tim desain.
+                    </p>
+
+                    <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 0.75rem;">
+                        Tanggung Jawab & Pencapaian Terukur:
+                    </h4>
+
+                    <ul class="timeline-list">
+                                                <li>Menguasai prinsip desain UI modern di Figma dan menerapkan praktik terbaik dalam pembuatan antarmuka.</li>
+                                                <li>Berperan aktif dalam tim beranggotakan 6 orang untuk mendesain UI sebuah website, berkontribusi dalam wireframing dan mockup awal.</li>
+                                                <li>Berhasil menyelesaikan desain UI untuk 37 tampilan halaman website Pembukuan dan Manajemen Produksi sebuah UMKM, meningkatkan efisiensi visual dan kemudahan navigasi.</li>
+                                            </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                                                <span class="badge badge-indigo">Figma</span>
+                                                <span class="badge badge-indigo">UI/UX Design</span>
+                                                <span class="badge badge-indigo">Wireframing</span>
+                                                <span class="badge badge-indigo">Prototyping</span>
+                                                <span class="badge badge-indigo">Design Systems</span>
+                                            </div>
+                </div>
+            </div>
+                        <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
+                        <span class="timeline-period">September 2021 – Oktober 2021</span>
+                        <span class="badge badge-emerald">Pengajaran &amp; Mentorship</span>
+                    </div>
+
+                    <h2 class="timeline-title">Instruktur Motion Graphic (Ekstrakurikuler)</h2>
+                    <h3 class="timeline-company">SMK Sima Bangsa &bull; <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">Jawa Barat</span></h3>
+
+                    <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.975rem; line-height: 1.65;">
+                        Memberikan pelatihan teknis dasar motion graphic dan pembinaan kreatif kepada siswa kejuruan.
+                    </p>
+
+                    <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 0.75rem;">
+                        Tanggung Jawab & Pencapaian Terukur:
+                    </h4>
+
+                    <ul class="timeline-list">
+                                                <li>Meningkatkan kemampuan presentasi publik dan penyampaian materi teknis kompleks secara komunikatif dan sistematis.</li>
+                                                <li>Bertanggung jawab dalam mengisi materi dasar motion graphic menggunakan Adobe After Effects kepada 7 pelajar ekstrakurikuler multimedia.</li>
+                                            </ul>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                                                <span class="badge badge-indigo">Public Speaking</span>
+                                                <span class="badge badge-indigo">Adobe After Effects</span>
+                                                <span class="badge badge-indigo">Motion Design</span>
+                                                <span class="badge badge-indigo">Curriculum Delivery</span>
+                                            </div>
+                </div>
+            </div>
+                    </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="../cv/" class="btn btn-primary">
+                Lihat Format Resume Lengkap (CV) &rarr;
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-col">
+                <a href="../" class="nav-brand" style="margin-bottom: 1.25rem;">
+                    <div class="nav-brand-logo">KO</div>
+                    <span>Khaerul Oktafiansyah</span>
+                </a>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 360px;">
+                    Lulusan S1 Teknik Informatika Universitas Pamulang dan pemegang sertifikasi BNSP Junior Data Analyst. Berfokus pada transformasi data menjadi keputusan strategis.
+                </p>
+                <div style="display: flex; gap: 0.75rem;">
+                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub">
+                        GitHub
+                    </a>
+                    <a href="https://wa.me/6281573179872" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Navigasi Halaman</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <li><a href="../" style="hover:color: var(--emerald-primary);">Beranda</a></li>
+                    <li><a href="../about/">Tentang Saya</a></li>
+                    <li><a href="../projects/">Katalog Proyek</a></li>
+                    <li><a href="../thesis/">Tugas Akhir (BBCA)</a></li>
+                    <li><a href="../experience/">Riwayat Pengalaman</a></li>
+                    <li><a href="../cv/">Curriculum Vitae</a></li>
+                    <li><a href="../contact/">Hubungi Saya</a></li>
+                </ul>
+            </div>
+
+            <!-- Direct Contact -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Informasi Kontak</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Email:</span>
+                        <a href="mailto:khaeruloktafiansyah04@gmail.com" style="color: var(--emerald-primary);">khaeruloktafiansyah04@gmail.com</a>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Telepon / WA:</span>
+                        <span>+62 815-7317-9872</span>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Lokasi Domisili:</span>
+                        <span>Tangerang Selatan, Banten, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p>&copy; 2026 Khaerul Oktafiansyah. Seluruh hak cipta dilindungi.</p>
+                <p style="font-size: 0.85rem;">
+                    Dibuat dengan <strong style="color: var(--indigo-primary);">Laravel PHP</strong> &bull; Siap Hosting di <strong style="color: var(--emerald-primary);">GitHub Pages</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Katalog Proyek — Khaerul Oktafiansyah</title>
+    <meta name="title" content="Katalog Proyek — Khaerul Oktafiansyah">
+    <meta name="description" content="Portofolio resmi Khaerul Oktafiansyah. Lulusan S1 Teknik Informatika Universitas Pamulang, BNSP Junior Data Analyst, dan spesialis Machine Learning serta Mobile Development.">
+    <meta name="author" content="Khaerul Oktafiansyah">
+    <meta name="keywords" content="Khaerul Oktafiansyah, Data Analyst, Machine Learning, Prediksi Saham BBCA, Teknik Informatika, Universitas Pamulang, Android Developer, Portofolio">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Katalog Proyek — Khaerul Oktafiansyah">
+    <meta property="og:description" content="Portofolio resmi Khaerul Oktafiansyah — Junior Data Analyst & Machine Learning Enthusiast.">
+    
+    <!-- Color Scheme & Anti-FOUC Theme Script -->
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Chart.js for Data Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <!-- Logo / Brand -->
+        <a href="../" class="nav-brand" aria-label="Beranda Khaerul Oktafiansyah">
+            <div class="nav-brand-logo">KO</div>
+            <div class="nav-brand-text">
+                <span>Khaerul O.</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu" id="nav-menu">
+            <li>
+                <a href="../" class="nav-link ">
+                    Beranda
+                </a>
+            </li>
+            <li>
+                <a href="../about/" class="nav-link ">
+                    Tentang
+                </a>
+            </li>
+            <li>
+                <a href="../projects/" class="nav-link active">
+                    Proyek
+                </a>
+            </li>
+            <li>
+                <a href="../thesis/" class="nav-link ">
+                    <span class="badge badge-emerald" style="padding: 0.15rem 0.4rem; font-size: 0.7rem; margin-right: 0.2rem;">TA</span>
+                    Tugas Akhir
+                </a>
+            </li>
+            <li>
+                <a href="../experience/" class="nav-link ">
+                    Pengalaman
+                </a>
+            </li>
+            <li>
+                <a href="../cv/" class="nav-link ">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a href="../contact/" class="nav-link ">
+                    Kontak
+                </a>
+            </li>
+        </ul>
+
+        <!-- Action Items (Theme Toggle & Mobile Menu) -->
+        <div class="nav-actions">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Mode Gelap dan Terang" title="Ubah Tema Tampilan">
+                <!-- Moon Icon (for Light Mode) -->
+                <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <!-- Sun Icon (for Dark Mode) -->
+                <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+
+            <!-- Quick CV Action -->
+            <a href="../cv/" class="btn btn-sm btn-outline-emerald d-none-sm">
+                Lihat CV
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-toggle-btn" id="mobile-nav-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Portofolio & Rekayasa</span>
+            <h1 class="section-title">Katalog Proyek</h1>
+            <p class="section-desc">
+                Daftar proyek nyata mencakup pemodelan prediktif Machine Learning, aplikasi mobile Android terpusat, dan perancangan antarmuka pengguna digital.
+            </p>
+        </div>
+
+        <!-- Filter Categories Tabs -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Semua Proyek (5)</button>
+            <button class="filter-btn" data-filter="tugas-akhir">Tugas Akhir / Skripsi</button>
+            <button class="filter-btn" data-filter="magang">Magang / Kerja Praktek</button>
+            <button class="filter-btn" data-filter="personal">Personal & Akademik</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+                        <div class="card project-card project-card-item" data-category="tugas-akhir">
+                <div class="project-thumbnail">
+                    <span class="project-type-chip">Skripsi / Machine Learning</span>
+                    <!-- Thumbnail Graphic -->
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; color: var(--emerald-primary);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span style="font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; color: var(--text-secondary);">Tugas Akhir</span>
+                    </div>
+                </div>
+
+                <div class="project-header">
+                    <span class="project-period">Oktober 2025 – September 2026</span>
+                    <h2 class="project-title" style="font-size: 1.35rem;">Pemodelan Prediksi Harga Saham BBCA</h2>
+                    <p style="font-size: 0.825rem; color: var(--indigo-primary); font-weight: 600; margin-bottom: 0.5rem;">
+                        Peran: Lead Researcher &amp; ML Developer
+                    </p>
+                </div>
+
+                <p class="project-summary">
+                    Proyek tugas akhir berfokus pada analisis data historis pergerakan saham BBCA di Bursa Efek Indonesia. Menggunakan pendekatan data science end-to-end: pembersihan outlier, imputasi, pembuatan indikator teknikal (Moving Averages, RSI, Lagged Price Features), dan pelatihan model prediktif untuk meminimalkan error forecasting.
+                </p>
+
+                <!-- Quantitative Metrics Box if available -->
+                                <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1.25rem;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Mean Absolute Error (MAE):</span>
+                        <strong style="color: var(--emerald-primary);">Rp 85.40</strong>
+                    </div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Root Mean Squared Error (RMSE):</span>
+                        <strong style="color: var(--emerald-primary);">Rp 112.20</strong>
+                    </div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Accuracy / Precision:</span>
+                        <strong style="color: var(--emerald-primary);">98.3%</strong>
+                    </div>
+                                    </div>
+                
+                <div class="project-tags">
+                                        <span class="badge">Python</span>
+                                        <span class="badge">Google Colab</span>
+                                        <span class="badge">Scikit-Learn</span>
+                                        <span class="badge">Pandas</span>
+                                        <span class="badge">NumPy</span>
+                                        <span class="badge">Matplotlib</span>
+                                        <span class="badge">Time Series</span>
+                                    </div>
+
+                <div class="project-footer">
+                                        <a href="../thesis/" class="btn btn-sm btn-primary">
+                        Halaman Skripsi &rarr;
+                    </a>
+                    
+                    <div style="display: flex; gap: 0.5rem;">
+                                                <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Repo">
+                            GitHub
+                        </a>
+                                            </div>
+                </div>
+            </div>
+                        <div class="card project-card project-card-item" data-category="magang">
+                <div class="project-thumbnail">
+                    <span class="project-type-chip">Kerja Praktek / Mobile App</span>
+                    <!-- Thumbnail Graphic -->
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; color: var(--emerald-primary);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span style="font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; color: var(--text-secondary);">Magang</span>
+                    </div>
+                </div>
+
+                <div class="project-header">
+                    <span class="project-period">Maret 2025 – Juni 2025</span>
+                    <h2 class="project-title" style="font-size: 1.35rem;">Aplikasi Stock Opname Gudang Berbasis Android</h2>
+                    <p style="font-size: 0.825rem; color: var(--indigo-primary); font-weight: 600; margin-bottom: 0.5rem;">
+                        Peran: Android Developer
+                    </p>
+                </div>
+
+                <p class="project-summary">
+                    Menggantikan metode lama berbasis kartu stok fisik yang rentan selisih dan rusak. Memfasilitasi scanner barcode/input cepat, audit stok real-time, dan penyimpanan data terpusat ke cloud Firebase sehingga pelaporan inventaris gudang dapat diakses instan oleh manajemen.
+                </p>
+
+                <!-- Quantitative Metrics Box if available -->
+                                <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1.25rem;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Efisiensi Waktu Audit:</span>
+                        <strong style="color: var(--emerald-primary);">65% Lebih Cepat</strong>
+                    </div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Risiko Kehilangan Data:</span>
+                        <strong style="color: var(--emerald-primary);">Tereduksi 90%</strong>
+                    </div>
+                                    </div>
+                
+                <div class="project-tags">
+                                        <span class="badge">Java</span>
+                                        <span class="badge">Android Studio</span>
+                                        <span class="badge">Firebase Realtime DB</span>
+                                        <span class="badge">XML Layout</span>
+                                        <span class="badge">CRUD</span>
+                                    </div>
+
+                <div class="project-footer">
+                                        <span class="badge badge-emerald">Dokumentasi Teruji</span>
+                    
+                    <div style="display: flex; gap: 0.5rem;">
+                                                <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Repo">
+                            GitHub
+                        </a>
+                                            </div>
+                </div>
+            </div>
+                        <div class="card project-card project-card-item" data-category="personal">
+                <div class="project-thumbnail">
+                    <span class="project-type-chip">Akademik / Android App</span>
+                    <!-- Thumbnail Graphic -->
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; color: var(--emerald-primary);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span style="font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; color: var(--text-secondary);">Personal</span>
+                    </div>
+                </div>
+
+                <div class="project-header">
+                    <span class="project-period">Juni 2023</span>
+                    <h2 class="project-title" style="font-size: 1.35rem;">Aplikasi Presensi Siswa Sekolah (CRUD)</h2>
+                    <p style="font-size: 0.825rem; color: var(--indigo-primary); font-weight: 600; margin-bottom: 0.5rem;">
+                        Peran: Mobile Developer
+                    </p>
+                </div>
+
+                <p class="project-summary">
+                    Membangun aplikasi presensi siswa dengan fungsionalitas CRUD (Create, Read, Update, Delete) yang rapi, mempermudah proses pencatatan kehadiran, rekapitulasi siswa hadir, izin, sakit, atau alfa secara periodik.
+                </p>
+
+                <!-- Quantitative Metrics Box if available -->
+                                <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1.25rem;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Fitur CRUD:</span>
+                        <strong style="color: var(--emerald-primary);">100% Berfungsi</strong>
+                    </div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Kecepatan Input:</span>
+                        <strong style="color: var(--emerald-primary);">Instan</strong>
+                    </div>
+                                    </div>
+                
+                <div class="project-tags">
+                                        <span class="badge">Java</span>
+                                        <span class="badge">Android Studio</span>
+                                        <span class="badge">SQLite</span>
+                                        <span class="badge">Material UI</span>
+                                    </div>
+
+                <div class="project-footer">
+                                        <span class="badge badge-emerald">Dokumentasi Teruji</span>
+                    
+                    <div style="display: flex; gap: 0.5rem;">
+                                                <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Repo">
+                            GitHub
+                        </a>
+                                            </div>
+                </div>
+            </div>
+                        <div class="card project-card project-card-item" data-category="personal">
+                <div class="project-thumbnail">
+                    <span class="project-type-chip">Pelatihan Kominfo / Game Dev</span>
+                    <!-- Thumbnail Graphic -->
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; color: var(--emerald-primary);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span style="font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; color: var(--text-secondary);">Personal</span>
+                    </div>
+                </div>
+
+                <div class="project-header">
+                    <span class="project-period">Juli 2023</span>
+                    <h2 class="project-title" style="font-size: 1.35rem;">Game Edukasi Puzzle Huruf Android</h2>
+                    <p style="font-size: 0.825rem; color: var(--indigo-primary); font-weight: 600; margin-bottom: 0.5rem;">
+                        Peran: Game Developer
+                    </p>
+                </div>
+
+                <p class="project-summary">
+                    Dikembangkan sebagai implementasi pembelajaran intensif 90 jam program Kominfo VSGA. Menerapkan algoritma pengacakan matriks huruf, pendeteksi kemenangan, timer, dan skor dinamis.
+                </p>
+
+                <!-- Quantitative Metrics Box if available -->
+                                <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1.25rem;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Nilai Evaluasi Pelatihan:</span>
+                        <strong style="color: var(--emerald-primary);">Kompeten</strong>
+                    </div>
+                                    </div>
+                
+                <div class="project-tags">
+                                        <span class="badge">Java</span>
+                                        <span class="badge">Android Studio</span>
+                                        <span class="badge">Game Logic</span>
+                                        <span class="badge">Algorithm</span>
+                                    </div>
+
+                <div class="project-footer">
+                                        <span class="badge badge-emerald">Dokumentasi Teruji</span>
+                    
+                    <div style="display: flex; gap: 0.5rem;">
+                                                <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Repo">
+                            GitHub
+                        </a>
+                                            </div>
+                </div>
+            </div>
+                        <div class="card project-card project-card-item" data-category="magang">
+                <div class="project-thumbnail">
+                    <span class="project-type-chip">UI/UX Design / Figma</span>
+                    <!-- Thumbnail Graphic -->
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; color: var(--emerald-primary);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span style="font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; color: var(--text-secondary);">Magang</span>
+                    </div>
+                </div>
+
+                <div class="project-header">
+                    <span class="project-period">Oktober 2021</span>
+                    <h2 class="project-title" style="font-size: 1.35rem;">Desain UI Website Pembukuan &amp; Produksi UMKM</h2>
+                    <p style="font-size: 0.825rem; color: var(--indigo-primary); font-weight: 600; margin-bottom: 0.5rem;">
+                        Peran: UI Designer (Team of 6)
+                    </p>
+                </div>
+
+                <p class="project-summary">
+                    Melakukan riset kebutuhan alur kerja pemilik usaha kecil, membuat sketsa wireframe, serta merancang visual mockup akhir dengan desain sistem konsisten di Figma guna menyederhanakan data finansial yang rumit.
+                </p>
+
+                <!-- Quantitative Metrics Box if available -->
+                                <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1.25rem;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Total Tampilan Halaman:</span>
+                        <strong style="color: var(--emerald-primary);">37 Halaman</strong>
+                    </div>
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem;">
+                        <span style="color: var(--text-secondary);">Anggota Tim:</span>
+                        <strong style="color: var(--emerald-primary);">6 Desainer</strong>
+                    </div>
+                                    </div>
+                
+                <div class="project-tags">
+                                        <span class="badge">Figma</span>
+                                        <span class="badge">Wireframing</span>
+                                        <span class="badge">UI Mockup</span>
+                                        <span class="badge">User Flow</span>
+                                        <span class="badge">Design System</span>
+                                    </div>
+
+                <div class="project-footer">
+                                        <span class="badge badge-emerald">Dokumentasi Teruji</span>
+                    
+                    <div style="display: flex; gap: 0.5rem;">
+                                                <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Repo">
+                            GitHub
+                        </a>
+                                            </div>
+                </div>
+            </div>
+                    </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-col">
+                <a href="../" class="nav-brand" style="margin-bottom: 1.25rem;">
+                    <div class="nav-brand-logo">KO</div>
+                    <span>Khaerul Oktafiansyah</span>
+                </a>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 360px;">
+                    Lulusan S1 Teknik Informatika Universitas Pamulang dan pemegang sertifikasi BNSP Junior Data Analyst. Berfokus pada transformasi data menjadi keputusan strategis.
+                </p>
+                <div style="display: flex; gap: 0.75rem;">
+                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub">
+                        GitHub
+                    </a>
+                    <a href="https://wa.me/6281573179872" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="WhatsApp">
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Navigasi Halaman</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <li><a href="../" style="hover:color: var(--emerald-primary);">Beranda</a></li>
+                    <li><a href="../about/">Tentang Saya</a></li>
+                    <li><a href="../projects/">Katalog Proyek</a></li>
+                    <li><a href="../thesis/">Tugas Akhir (BBCA)</a></li>
+                    <li><a href="../experience/">Riwayat Pengalaman</a></li>
+                    <li><a href="../cv/">Curriculum Vitae</a></li>
+                    <li><a href="../contact/">Hubungi Saya</a></li>
+                </ul>
+            </div>
+
+            <!-- Direct Contact -->
+            <div class="footer-col">
+                <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem;">Informasi Kontak</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.925rem; color: var(--text-secondary);">
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Email:</span>
+                        <a href="mailto:khaeruloktafiansyah04@gmail.com" style="color: var(--emerald-primary);">khaeruloktafiansyah04@gmail.com</a>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Telepon / WA:</span>
+                        <span>+62 815-7317-9872</span>
+                    </div>
+                    <div>
+                        <span style="font-weight: 600; color: var(--text-primary); display: block;">Lokasi Domisili:</span>
+                        <span>Tangerang Selatan, Banten, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p>&copy; 2026 Khaerul Oktafiansyah. Seluruh hak cipta dilindungi.</p>
+                <p style="font-size: 0.85rem;">
+                    Dibuat dengan <strong style="color: var(--indigo-primary);">Laravel PHP</strong> &bull; Siap Hosting di <strong style="color: var(--emerald-primary);">GitHub Pages</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    </body>
+</html>
