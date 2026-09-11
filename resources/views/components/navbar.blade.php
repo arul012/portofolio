@@ -2,7 +2,7 @@
     <div class="container nav-container">
         <!-- Logo / Brand -->
         <a href="{{ route('home') }}" class="nav-brand" aria-label="Beranda Khaerul Oktafiansyah">
-            <div class="nav-brand-logo">KO</div>
+            <img src="{{ asset('images/profile.jpg') }}" alt="Profile Khaerul" class="nav-brand-logo">
             <div class="nav-brand-text">
                 <span>Khaerul O.</span>
             </div>

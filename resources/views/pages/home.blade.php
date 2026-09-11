@@ -70,9 +70,7 @@
                 <div class="hero-avatar-inner">
                     <!-- Dynamic SVG Illustration Profile Avatar -->
                     <div style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%); color: #ffffff; padding: 2rem; text-align: center;">
-                        <div style="width: 130px; height: 130px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #6366f1); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; font-weight: 800; margin-bottom: 1.25rem; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);">
-                            KO
-                        </div>
+                        <img src="{{ asset('images/profile.jpg') }}" alt="Khaerul Oktafiansyah" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 1.25rem; border: 3px solid var(--emerald-primary); box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);">
                         <h3 style="font-size: 1.35rem; font-weight: 700; color: #ffffff; margin-bottom: 0.35rem;">Khaerul Oktafiansyah</h3>
                         <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.75rem;">Universitas Pamulang &bull; IPK 3.77</p>
                         <span class="badge badge-emerald">BNSP Junior Data Analyst</span>

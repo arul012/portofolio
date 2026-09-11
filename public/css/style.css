@@ -209,15 +209,11 @@ img {
 .nav-brand-logo {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--emerald-primary), var(--indigo-primary));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1.15rem;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
   box-shadow: 0 4px 12px var(--emerald-glow);
+  border: 1.5px solid var(--emerald-primary);
 }
 
 .nav-menu {

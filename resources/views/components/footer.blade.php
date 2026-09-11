@@ -4,7 +4,7 @@
             <!-- Brand Column -->
             <div class="footer-col">
                 <a href="{{ route('home') }}" class="nav-brand" style="margin-bottom: 1.25rem;">
-                    <div class="nav-brand-logo">KO</div>
+                    <img src="{{ asset('images/profile.jpg') }}" alt="Profile Khaerul" class="nav-brand-logo">
                     <span>Khaerul Oktafiansyah</span>
                 </a>
                 <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 360px;">
