@@ -24,13 +24,18 @@ jobs:
           coverage: none
 
       - name: 3. Copy Environment Configuration
-        run: cp .env.example .env
+        run: |
+          cp .env.example .env
+          mkdir -p database
+          touch database/database.sqlite
 
       - name: 4. Install Composer Dependencies
         run: composer install --prefer-dist --no-progress --no-interaction --optimize-autoloader
 
-      - name: 5. Generate Laravel Application Key
-        run: php artisan key:generate --force
+      - name: 5. Generate Application Key & Run Migrations
+        run: |
+          php artisan key:generate --force
+          php artisan migrate --force
 
       - name: 6. Set Permissions for Storage and Cache
         run: |

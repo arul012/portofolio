@@ -57,8 +57,9 @@ class ExportStaticCommand extends Command
             $response = $kernel->handle($request);
 
             if ($response->getStatusCode() !== 200) {
-                $this->error(" Gagal merender {$uri} (Status {$response->getStatusCode()})");
-                continue;
+                $this->error(" ❌ Gagal merender {$uri} (Status {$response->getStatusCode()})");
+                $this->error("Detail Error: " . substr(strip_tags($response->getContent()), 0, 500));
+                return Command::FAILURE;
             }
 
             $htmlContent = $response->getContent();
