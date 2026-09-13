@@ -21,7 +21,7 @@ class PortfolioData
             'phone' => '+62 815-7317-9872',
             'whatsapp_link' => 'https://wa.me/6281573179872',
             'location' => 'Tangerang Selatan, Banten, Indonesia',
-            'linkedin' => 'https://linkedin.com/in/khaerul-oktafiansyah',
+            'linkedin' => 'https://www.linkedin.com/in/khaerul-oktafiansyah-1ab054241/',
             'github' => 'https://github.com/arul012',
             'hero_tagline' => 'Lulusan TI | Junior Data Analyst | Tugas Akhir: Model Prediksi Harga Saham BBCA',
             'bio_summary' => 'Mahasiswa tingkat akhir S1 Teknik Informatika Universitas Pamulang dan pemegang sertifikasi kompetensi BNSP Junior Data Analyst. Memiliki keahlian teruji dalam pemrosesan data, pemodelan prediktif, serta analisis statistik menggunakan Python dan Google Colab. Berhasil menyelesaikan proyek tugas akhir berbasis Machine Learning untuk memprediksi pergerakan harga saham PT Bank Central Asia Tbk (BBCA). Bersemangat dalam mentransformasi data mentah menjadi wawasan bisnis yang strategis, akurat, dan dapat dieksekusi.',
@@ -260,19 +260,15 @@ class PortfolioData
                 ],
                 [
                     'step' => '03',
-                    'name' => 'Feature Engineering',
-                    'desc' => 'Pembuatan fitur lag $T-1$ hingga $T-7$, Simple Moving Average (SMA), Exponential Moving Average (EMA), serta rasio volatilitas harian.'
-                ],
-                [
-                    'step' => '04',
                     'name' => 'Model Training & Tuning',
                     'desc' => 'Pemisahan data Train-Test (80:20), fitting model time series berbasis Python di Google Colab dengan hyperparameter tuning.'
                 ],
                 [
-                    'step' => '05',
+                    'step' => '04',
                     'name' => 'Evaluation & Verification',
                     'desc' => 'Pengukuran deviasi nilai prediksi terhadap harga aktual menggunakan MAE, RMSE, dan kalkulasi persentase kesalahan MAPE.'
-                ]
+                ],
+
             ],
             'evaluation_metrics' => [
                 [
@@ -290,11 +286,6 @@ class PortfolioData
                     'value' => '1.72%',
                     'desc' => 'Tingkat kesalahan di bawah 2%, mengindikasikan kemampuan prediksi berkategori Sangat Akurat (Very High Accuracy).'
                 ],
-                [
-                    'metric' => 'R-Squared (R² Score)',
-                    'value' => '0.968',
-                    'desc' => 'Model mampu menerangkan 96.8% variansi fluktuasi pergerakan harga penutupan BBCA.'
-                ]
             ],
             // 30-Day Time Series Simulation Data (BBCA Price Sample) for Chart.js
             'chart_data' => [
@@ -323,9 +314,9 @@ class PortfolioData
                     10515, 10465, 10535, 10585, 10590
                 ]
             ],
-            'paper_link' => '#',
-            'presentation_link' => '#',
-            'colab_link' => 'https://colab.research.google.com'
+            'paper_link' => 'https://drive.google.com/file/d/1wtWf--1rQA2xJRl56JCLaaAOK1zJbpgo/view?usp=drive_link',
+            'presentation_link' => 'https://drive.google.com/file/d/16fALxuMr0c-QJ1xRq26ULZrMY07G8kqL/view?usp=drive_link',
+            'colab_link' => 'https://colab.research.google.com/drive/1TwuB2Y4uOq4xiwMUMdSmlNuLa18tEj-V?usp=drive_link'
         ];
     }
 
@@ -400,7 +391,7 @@ class PortfolioData
             ],
             'Data Analytics & BI' => [
                 ['name' => 'Google Colab & Jupyter', 'level' => 'Tingkat Mahir', 'percent' => 92, 'icon' => 'cpu'],
-                ['name' => 'Tableau & Power BI', 'level' => 'Tingkat Menengah', 'percent' => 82, 'icon' => 'bar-chart'],
+                ['name' => 'Power BI', 'level' => 'Tingkat Menengah', 'percent' => 82, 'icon' => 'bar-chart'],
                 ['name' => 'Spreadsheet & MS Excel', 'level' => 'Tingkat Mahir', 'percent' => 90, 'icon' => 'table'],
                 ['name' => 'Firebase Realtime DB', 'level' => 'Tingkat Menengah', 'percent' => 80, 'icon' => 'cloud']
             ],

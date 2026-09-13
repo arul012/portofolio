@@ -72,7 +72,7 @@
                     </div>
                     <div>
                         <span style="font-size: 0.8rem; color: var(--text-muted); display: block; text-transform: uppercase;">Jejaring Profesional</span>
-                        <strong style="color: var(--text-primary); font-size: 0.95rem;">linkedin.com/in/khaerul-oktafiansyah</strong>
+                        <strong style="color: var(--text-primary); font-size: 0.95rem;">linkedin.com/in/khaerul-oktafiansyah-1ab054241</strong>
                     </div>
                 </a>
 

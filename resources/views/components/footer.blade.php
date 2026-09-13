@@ -11,7 +11,7 @@
                     Lulusan S1 Teknik Informatika Universitas Pamulang dan pemegang sertifikasi BNSP Junior Data Analyst. Berfokus pada transformasi data menjadi keputusan strategis.
                 </p>
                 <div style="display: flex; gap: 0.75rem;">
-                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/khaerul-oktafiansyah-1ab054241/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="LinkedIn">
                         LinkedIn
                     </a>
                     <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub">

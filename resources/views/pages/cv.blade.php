@@ -151,7 +151,7 @@
                         <strong style="color: var(--text-primary);">Bahasa Pemrograman & Query:</strong> Python, SQL (MySQL, PostgreSQL), Java, PHP (Laravel).
                     </div>
                     <div>
-                        <strong style="color: var(--text-primary);">Tools & Platform:</strong> Google Colab, Tableau, Power BI, Spreadsheet / Excel, Firebase, Android Studio, Figma.
+                        <strong style="color: var(--text-primary);">Tools & Platform:</strong> Google Colab, Power BI, Spreadsheet / Excel, Firebase, Android Studio, Figma.
                     </div>
                     <div>
                         <strong style="color: var(--text-primary);">Keahlian Data:</strong> Data Cleaning, Exploratory Data Analysis (EDA), Predictive Modeling, Time Series Analysis, Data Validation.

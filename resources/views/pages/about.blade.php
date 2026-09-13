@@ -36,7 +36,7 @@
                 </p>
 
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <a href="https://linkedin.com/in/khaerul-oktafiansyah" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://www.linkedin.com/in/khaerul-oktafiansyah-1ab054241/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                         Profil LinkedIn &rarr;
                     </a>
                     <a href="https://github.com/arul012" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">

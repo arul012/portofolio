@@ -181,14 +181,14 @@
                 <div style="font-size: 2.5rem; margin-bottom: 1rem;">📄</div>
                 <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Laporan Skripsi</h3>
                 <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Format PDF Dokumen Lengkap</p>
-                <a href="{{ route('cv') }}" class="btn btn-sm btn-primary">Unduh Naskah</a>
+                <a href="{{ $thesis['paper_link'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Unduh Naskah</a>
             </div>
 
             <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
                 <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
                 <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Slide Presentasi</h3>
                 <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Slide Sidang Tugas Akhir</p>
-                <a href="{{ route('cv') }}" class="btn btn-sm btn-secondary">Lihat Paparan</a>
+                <a href="{{ $thesis['presentation_link'] }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Lihat Paparan</a>
             </div>
 
             <div class="card" style="text-align: center; padding: 2rem 1.5rem;">
